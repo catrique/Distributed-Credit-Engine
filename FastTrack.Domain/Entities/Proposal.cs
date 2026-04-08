@@ -11,18 +11,18 @@ public class Proposal
     public ProposalStatus Status { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
-    public Proposal(string document, decimal amount, int installments)
+    public Proposal(string document, decimal requestedAmount, int installments)
     {
         if (string.IsNullOrWhiteSpace(document) || document.Length != 11)
             throw new ArgumentException("CPF deve ter 11 dígitos");
-        if (amount < 100 || amount > 100000)
+        if (requestedAmount < 100 || requestedAmount > 100000)
             throw new ArgumentException("O valor soliciado deve estar entre R$ 100 e R$100.000");
             if(installments < 1 || installments > 48)
             throw new ArgumentException("O parcelamento deve ser entre 1 e 48 meses.");
 
             Id = Guid.NewGuid();
             Document = document;
-            RequestedAmount = amount;
+            RequestedAmount = requestedAmount;
             Installments = installments;
             Status = ProposalStatus.Pending;
             CreatedAt = DateTime.UtcNow;

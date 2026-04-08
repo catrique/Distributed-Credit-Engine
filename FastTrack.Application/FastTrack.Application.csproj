@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FastTrack.Domain\FastTrack.Domain.csproj" />
+    <ProjectReference Include="..\FastTrack.Infrastructure\FastTrack.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

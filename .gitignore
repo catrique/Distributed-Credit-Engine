@@ -272,6 +272,11 @@ ServiceFabricBackup/
 *.ldf
 *.ndf
 
+# Banco de Dados SQLite (IMPORTANTE!)
+*.db
+*.db-shm
+*.db-wal
+
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
@@ -482,3 +487,6 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+appsettings.Development.json
+*.log
